@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - jupyverse-api >=0.1.2,<1
-    - jupyterlab >=4.0.0b0,<5
+    - jupyterlab >=3,<5
 
 test:
   imports:
