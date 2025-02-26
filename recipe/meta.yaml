@@ -1,5 +1,5 @@
 {% set name = "fps-jupyterlab" %}
-{% set version = "0.7.4" %}
+{% set version = "0.7.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_jupyterlab-{{ version }}.tar.gz
-  sha256: de44142ac706aeb274d106ffa72f0ca97f036ae07b6c936d3358324f7bb5fff1
+  sha256: c4de7817c22bfe4d2e20bae4a3e295dff77105e92c021c3b6b322db253d01c44
 
 build:
   noarch: python
