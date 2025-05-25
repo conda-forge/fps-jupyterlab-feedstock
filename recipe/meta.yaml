@@ -21,8 +21,8 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.7.0,<1
-    - jupyterlab >=4.4.1,<5
+    - jupyverse-api >=0.8.0,<0.9.0
+    - jupyterlab-js >=4.4.2,<5
 
 test:
   requires:
