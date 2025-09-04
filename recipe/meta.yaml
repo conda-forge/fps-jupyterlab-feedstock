@@ -1,5 +1,5 @@
 {% set name = "fps-jupyterlab" %}
-{% set version = "0.9.1" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_jupyterlab-{{ version }}.tar.gz
-  sha256: 4f1a1b85265fa291fddb712a4552af44995dda3090e6c83df6459a6029a1d27f
+  sha256: 05e7602bb643606d8d2fcf60d333e536282739d0029230318c31957f3cbd4845
 
 build:
   noarch: python
@@ -21,12 +21,15 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.0,<0.12.0
+    - jupyverse-api >=0.12.0,<0.13.0
     - jupyterlab-js >=4.4.2,<5
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
   imports:
     - fps_jupyterlab
 
