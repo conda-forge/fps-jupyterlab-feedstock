@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.11.3"
+  version: "0.11.4"
 
 package:
   name: fps-jupyterlab
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-jupyterlab/fps_jupyterlab-${{ version }}.tar.gz
-    sha256: 92ea05c76d1d60661b822aff0d616e0928e2ab08310fae0fde664fb2df433fad
+    sha256: 57159f3ab71b77dfbab881a1d7c2364398c7d3c515542b4c23bc47a12d453c53
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - uv-build >=0.11.32,<0.12
   run:
     - python >=${{ python_min }}
     - fastapi-core
@@ -31,7 +31,7 @@ requirements:
     - jupyverse-auth >=0.2.0,<0.3.0
     - jupyverse-frontend >=0.1.0,<0.2.0
     - jupyverse-jupyterlab >=0.1.0,<0.2.0
-    - jupyverse-lab >=0.3.0,<0.4.0
+    - jupyverse-lab >=0.3.1,<0.4.0
     - starlette
 
 tests:
